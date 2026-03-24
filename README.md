@@ -14,15 +14,15 @@
 <br/>
 
 ```
-  ╔══════════════════════════════════════════════════════════════╗
-  ║                                                              ║
-  ║   noise ×1  →  P(|00⟩) = 0.4980                              ║
-  ║   noise ×2  →  P(|00⟩) = 0.4630                              ║
-  ║   noise ×3  →  P(|00⟩) = 0.4620                              ║
-  ║                          ↓                                   ║
-  ║   ZNE mitigated  →  P(|00⟩) = 0.5103  (true = 0.5000)        ║
-  ║                                                              ║
-  ╚══════════════════════════════════════════════════════════════╝
+ 
+                                                               
+      noise ×1  →  P(|00⟩) = 0.4980                              
+      noise ×2  →  P(|00⟩) = 0.4630                              
+      noise ×3  →  P(|00⟩) = 0.4620                              
+                            ↓                                   
+      ZNE mitigated  →  P(|00⟩) = 0.5103  (true = 0.5000)        
+                                                                
+  
 ```
 
 <div align="center">
@@ -30,7 +30,7 @@
 </div>
 
 ---
-
+```
 ## Overview
 
 This notebook implements **Zero-Noise Extrapolation (ZNE)** — a quantum error mitigation technique that recovers accurate results from noisy quantum hardware.
@@ -44,15 +44,15 @@ Real quantum computers make mistakes. Gates are imperfect. Qubits lose their sta
 | Noise amplification (X·X pairs) | Intentionally scales noise by ×1, ×2, ×3 |
 | Linear extrapolation | Fits a line and projects back to zero noise |
 | AerSimulator | Local simulation — 1000 shots per run |
-
+```
 ---
-
+```
 ## The Problem — Why Noise Matters
 
 Days 1 through 5 used AerSimulator in perfect mode. No errors. Clean results every time.
 
 Real IBM quantum hardware is different.
-
+```
 ```
 What goes wrong on real hardware:
 
@@ -244,11 +244,7 @@ Day 04  ──  ✅  VQE · parametric circuits · COBYLA optimizer
 Day 05  ──  ✅  QAOA · MaxCut · optimal partition found
 Day 06  ──  ✅  Quantum Error Mitigation · noise models · ZNE
 Day 07  ──  ⬡   Run all experiments on real IBM hardware
-·
-·
-Day 20  ──  ·   Final push · 50+ applications · LinkedIn article
 ```
-
 ---
 
 ## What's Next — Day 7
